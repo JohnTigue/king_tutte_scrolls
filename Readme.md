@@ -72,11 +72,14 @@ vectors.
 For pedological purposes, ignore such valuable optimizations for now. The core
 architecture of King Tutte pipelines has a regular structure.
 
+<div align="center">
 <a href="https://connoiter.com/blog/data_map_pipeline/">
 <img src="images/data_map_pipeline.jpeg" width="80%" />
 </a>
+</div>
 
-Note that although the Tutte Institute folks are the ones who did all
+
+Note that although the Tutte Ilnstitute folks are the ones who did all
 the original work, they did release their work as permissively
 licensed open source, and so others have since contributed. For
 example, the original implementation of UMAP is distributed as the
@@ -188,12 +191,27 @@ such as the Enigma machine. It can be thought of as an en silico
 picking of physical locks by tuning into (via XOR filters on bit
 streams) their encrypted digital broadcasts. 
 
+<div align="center">
+  <a href="https://www.bbc.com/news/uk-36401663">
+    <img src="./images/lorenz_teleprinter.jpg" width="50%" />
+  </a>
+  <p>The teleprinter for the Lorenz cipher machine</p>
+</div>
+
+
 The reason why this work was more impressive than cracking Enigma is
 that during the war the Allies never captured a Lorenz machine (which
 generated Fish code). In contrast, for Enigma they did acquire a
 machine including its code books, which proved quite handy while
 reverse engineering the Enigma machine, otherwise all one'd have to go
 on is intercepted ciphertext broadcast to work it all out. :(
+
+<div align="center">
+  <a href="https://www.bbc.com/news/uk-36401663">
+    <img src="./images/lorenz_machine.jpg" align="left" width="50%" />
+  </a>
+  <p>Lorenz cypher coder wheels</p>
+</div>
 
 Perhaps his work which is closest to this datamap technology is to be
 found in his 1963 paper, [How to Draw a
@@ -202,6 +220,7 @@ But that is just a tangential curiosity since these King Tutte
 pipelines use UMAP which is a force-directed method (a.k.a. spring
 embedder), and Bill used different methods to plot a 2D map of
 datapoints.
+
 
 ### King Tut
 
@@ -228,22 +247,23 @@ developed by the Tutte Institute, the term "King Tutte" and this repo
 are ideas out of the start-up, Connoiter. There is **no relation** between
 the two organizations. 
 
-Blame Connoiter for the lighthearted nature of this project. In
+Blame Connoiter for the lighthearted tone of this project. In
 contrast, the Tutte Institute is a serious Canadian government
-research institute whose technology was partially developed for use
-by Five Eyes nations for cyberdefense purposes.
-
-As to the spelling of "datamap" versus the (currently) more common
-"data map," that too was a decision made by Connoiter. If "dataset" and
-"datapoint" can be a single words, why not "datamap?"
+research institute whose technology they have open sourced -- and
+which is used herein -- was partially developed for use by Five Eyes
+nations for cyberdefense purposes. No joke.
 
 <div align="center">
 <a href="https://cdn.aarp.net/content/dam/aarp/entertainment/Styles-and-Trends/2017/05/1140-steve-martin-king-tut.imgcache.rev43bf12cdafa4dad1053724bc5ed42e42.web.1140.655.jpg">
 <img src="./images/king_tutte_at_the_mic.png" width="50%" />
 </a>
 <br/>
-<a href="https://www.rhino.com/article/live-from-new-york-its-king-tut">Via Rhino</a>
+<a href="https://www.rhino.com/article/live-from-new-york-its-king-tut">Joke via Rhino</a>
 </div>
+
+As to the spelling of "datamap" versus the (currently) more common
+"data map," that too was a decision made by Connoiter. If "dataset" and
+"datapoint" can be single words, why you hating on "datamap?"
 
 
 ## Repo structure
