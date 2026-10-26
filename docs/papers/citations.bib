@@ -1,0 +1,345 @@
+% BibTeX for every paper in docs/papers/index.md. Repos without a
+% paper are in repos/citations.bib.
+%
+% Where an upstream repo says how it wants to be cited, the entry is
+% copied from there unchanged (key included, so it matches what people
+% copied from the upstream README) and the source is named above it.
+% Everything else comes from the DOI's Crossref record or the arXiv API,
+% checked on 2026-10-25. See index.md, "How to cite", for which entry to
+% cite when.
+
+% ===================================================================
+% UMAP
+% ===================================================================
+
+% From repos/umap/README.rst: cite this when you use the umap-learn software.
+@article{mcinnes2018umap-software,
+  title={UMAP: Uniform Manifold Approximation and Projection},
+  author={McInnes, Leland and Healy, John and Saul, Nathaniel and Grossberger, Lukas},
+  journal={The Journal of Open Source Software},
+  volume={3},
+  number={29},
+  pages={861},
+  year={2018}
+}
+
+% From repos/umap/README.rst: cite this for the UMAP algorithm itself.
+@article{2018arXivUMAP,
+     author = {{McInnes}, L. and {Healy}, J. and {Melville}, J.},
+     title = "{UMAP: Uniform Manifold Approximation
+     and Projection for Dimension Reduction}",
+     journal = {ArXiv e-prints},
+     archivePrefix = "arXiv",
+     eprint = {1802.03426},
+     primaryClass = "stat.ML",
+     keywords = {Statistics - Machine Learning,
+                 Computer Science - Computational Geometry,
+                 Computer Science - Learning},
+     year = 2018,
+     month = feb,
+}
+
+% From repos/umap/README.rst: cite this if the Nature Primer helped you.
+@article{Healy2024,
+  author={Healy, John
+  and McInnes, Leland},
+  title={Uniform manifold approximation and projection},
+  journal={Nature Reviews Methods Primers},
+  year={2024},
+  month={Nov},
+  day={21},
+  volume={4},
+  number={1},
+  pages={82},
+  issn={2662-8449},
+  doi={10.1038/s43586-024-00363-x},
+  url={https://doi.org/10.1038/s43586-024-00363-x}
+}
+
+% From repos/umap/README.rst: cite this if you use Parametric UMAP.
+% The published version is Neural Computation 33(11), 2021,
+% doi:10.1162/neco_a_01434 (see sainburg2021parametric below).
+@article {SMG2020,
+    author = {Sainburg, Tim and McInnes, Leland and Gentner, Timothy Q.},
+    title = {Parametric UMAP: learning embeddings with deep neural networks for representation and semi-supervised learning},
+    journal = {ArXiv e-prints},
+    archivePrefix = "arXiv",
+    eprint = {2009.12981},
+    primaryClass = "stat.ML",
+    keywords = {Statistics - Machine Learning,
+                Computer Science - Computational Geometry,
+                Computer Science - Learning},
+    year = 2020,
+    }
+
+@article{sainburg2021parametric,
+  title={Parametric {UMAP} Embeddings for Representation and Semisupervised Learning},
+  author={Sainburg, Tim and McInnes, Leland and Gentner, Timothy Q.},
+  journal={Neural Computation},
+  volume={33},
+  number={11},
+  pages={2881--2907},
+  year={2021},
+  publisher={MIT Press},
+  doi={10.1162/neco_a_01434}
+}
+
+% From repos/umap/README.rst: cite this if you use densMAP (densmap=True).
+@article {NBC2020,
+    author = {Narayan, Ashwin and Berger, Bonnie and Cho, Hyunghoon},
+    title = {Assessing Single-Cell Transcriptomic Variability through Density-Preserving Data Visualization},
+    journal = {Nature Biotechnology},
+    year = {2021},
+    doi = {10.1038/s41587-020-00801-7},
+    publisher = {Springer Nature},
+    URL = {https://doi.org/10.1038/s41587-020-00801-7},
+    eprint = {https://www.biorxiv.org/content/early/2020/05/14/2020.05.12.077776.full.pdf},
+}
+
+@article{becht2019umap,
+  title={Dimensionality reduction for visualizing single-cell data using {UMAP}},
+  author={Becht, Etienne and McInnes, Leland and Healy, John and Dutertre, Charles-Antoine and Kwok, Immanuel W. H. and Ng, Lai Guan and Ginhoux, Florent and Newell, Evan W.},
+  journal={Nature Biotechnology},
+  volume={37},
+  number={1},
+  pages={38--44},
+  year={2019},
+  publisher={Springer Nature},
+  doi={10.1038/nbt.4314}
+}
+
+@article{li2019manifold,
+  title={Manifold learning of four-dimensional scanning transmission electron microscopy},
+  author={Li, Xin and Dyck, Ondrej E. and Oxley, Mark P. and Lupini, Andrew R. and McInnes, Leland and Healy, John and Jesse, Stephen and Kalinin, Sergei V.},
+  journal={npj Computational Materials},
+  volume={5},
+  number={1},
+  pages={5},
+  year={2019},
+  publisher={Springer Nature},
+  doi={10.1038/s41524-018-0139-y}
+}
+
+% ===================================================================
+% HDBSCAN and density clustering
+% ===================================================================
+
+% From repos/hdbscan/README.rst: cite this when you use the hdbscan software.
+@article{mcinnes2017hdbscan,
+  title={hdbscan: Hierarchical density based clustering},
+  author={McInnes, Leland and Healy, John and Astels, Steve},
+  journal={The Journal of Open Source Software},
+  volume={2},
+  number={11},
+  pages={205},
+  year={2017}
+}
+
+% From repos/hdbscan/README.rst: cite this for the accelerated algorithm
+% (also the basis of fast_hdbscan, per repos/fast_hdbscan/README.rst).
+@inproceedings{mcinnes2017accelerated,
+  title={Accelerated Hierarchical Density Based Clustering},
+  author={McInnes, Leland and Healy, John},
+  booktitle={Data Mining Workshops (ICDMW), 2017 IEEE International Conference on},
+  pages={33--42},
+  year={2017},
+  organization={IEEE}
+}
+
+% From repos/fast_plscan/README.md. Also the paper EVōC asks you to cite
+% (repos/evoc/README.rst), and the source of fast_hdbscan's PLSCAN mode.
+@misc{bot2025plscan,
+  title         = {Persistent Multiscale Density-based Clustering},
+  author        = {Dani{\"{e}}l Bot and Leland McInnes and Jan Aerts},
+  year          = {2025},
+  eprint        = {2512.16558},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2512.16558}
+}
+
+@incollection{mcinnes2019topological,
+  title={Topological Methods for Unsupervised Learning},
+  author={McInnes, Leland},
+  booktitle={Geometric Science of Information (GSI 2019)},
+  series={Lecture Notes in Computer Science},
+  volume={11712},
+  pages={343--350},
+  year={2019},
+  publisher={Springer},
+  doi={10.1007/978-3-030-26980-7_35}
+}
+
+% ===================================================================
+% Topological data analysis and surveys
+% ===================================================================
+
+@misc{ruscitti2024mapper,
+  title         = {Improving Mapper's Robustness by Varying Resolution According to Lens-Space Density},
+  author        = {Ruscitti, Kaleb D. and McInnes, Leland},
+  year          = {2024},
+  eprint        = {2410.03862},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2410.03862}
+}
+
+@misc{debodt2025embeddings,
+  title         = {Low-dimensional embeddings of high-dimensional data},
+  author        = {de Bodt, Cyril and Diaz-Papkovich, Alex and Bleher, Michael and Bunte, Kerstin and Coupette, Corinna and Damrich, Sebastian and Fita Sanmartin, Enrique and Hamprecht, Fred A. and Horv{\'a}t, Em{\H{o}}ke-{\'A}gnes and Kohli, Dhruv and Krishnaswamy, Smita and Lee, John A. and Lelieveldt, Boudewijn P. F. and McInnes, Leland and Nabney, Ian T. and Noichl, Maximilian and Poli{\v{c}}ar, Pavlin G. and Rieck, Bastian and Wolf, Guy and Mishne, Gal and Kobak, Dmitry},
+  year          = {2025},
+  eprint        = {2508.15929},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2508.15929}
+}
+
+% ===================================================================
+% Collaborators and ecosystem
+% ===================================================================
+
+% From repos/hdbscan/README.rst: cite this if you use branch detection
+% (in hdbscan, fast_hdbscan or pyflasc).
+@article{bot2025flasc,
+    title   = {{FLASC: a flare-sensitive clustering algorithm}},
+    author  = {Bot, Dani{\"{e}}l M. and Peeters, Jannes and Liesenborgs, Jori and Aerts, Jan},
+    year    = {2025},
+    month   = {apr},
+    journal = {PeerJ Comput. Sci.},
+    volume  = {11},
+    pages   = {e2792},
+    issn    = {2376-5992},
+    doi     = {10.7717/peerj-cs.2792},
+    url     = {https://peerj.com/articles/cs-2792},
+}
+
+@misc{bot2024lens,
+  title         = {Lens functions for exploring {UMAP} Projections with Domain Knowledge},
+  author        = {Bot, Dani{\"{e}}l M. and Aerts, Jan},
+  year          = {2024},
+  eprint        = {2405.09204},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2405.09204}
+}
+
+@article{kobak2021initialization,
+  title={Initialization is critical for preserving global data structure in both t-{SNE} and {UMAP}},
+  author={Kobak, Dmitry and Linderman, George C.},
+  journal={Nature Biotechnology},
+  volume={39},
+  number={2},
+  pages={156--157},
+  year={2021},
+  publisher={Springer Nature},
+  doi={10.1038/s41587-020-00809-z}
+}
+
+% ===================================================================
+% Foundations
+% ===================================================================
+
+@inproceedings{campello2013density,
+  title={Density-Based Clustering Based on Hierarchical Density Estimates},
+  author={Campello, Ricardo J. G. B. and Moulavi, Davoud and Sander, J{\"o}rg},
+  booktitle={Advances in Knowledge Discovery and Data Mining (PAKDD 2013)},
+  series={Lecture Notes in Computer Science},
+  volume={7819},
+  pages={160--172},
+  year={2013},
+  publisher={Springer},
+  doi={10.1007/978-3-642-37456-2_14}
+}
+
+@article{campello2015hierarchical,
+  title={Hierarchical Density Estimates for Data Clustering, Visualization, and Outlier Detection},
+  author={Campello, Ricardo J. G. B. and Moulavi, Davoud and Zimek, Arthur and Sander, J{\"o}rg},
+  journal={ACM Transactions on Knowledge Discovery from Data},
+  volume={10},
+  number={1},
+  pages={1--51},
+  year={2015},
+  doi={10.1145/2733381}
+}
+
+@inproceedings{ester1996dbscan,
+  title={A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise},
+  author={Ester, Martin and Kriegel, Hans-Peter and Sander, J{\"o}rg and Xu, Xiaowei},
+  booktitle={Proceedings of the Second International Conference on Knowledge Discovery and Data Mining (KDD-96)},
+  pages={226--231},
+  year={1996},
+  publisher={AAAI Press}
+}
+
+@inproceedings{chaudhuri2010rates,
+  title={Rates of convergence for the cluster tree},
+  author={Chaudhuri, Kamalika and Dasgupta, Sanjoy},
+  booktitle={Advances in Neural Information Processing Systems 23 (NIPS 2010)},
+  pages={343--351},
+  year={2010}
+}
+
+@inproceedings{dong2011nndescent,
+  title={Efficient k-nearest neighbor graph construction for generic similarity measures},
+  author={Dong, Wei and Charikar, Moses and Li, Kai},
+  booktitle={Proceedings of the 20th International Conference on World Wide Web (WWW '11)},
+  pages={577--586},
+  year={2011},
+  publisher={ACM},
+  doi={10.1145/1963405.1963487}
+}
+
+@article{belkin2003laplacian,
+  title={Laplacian Eigenmaps for Dimensionality Reduction and Data Representation},
+  author={Belkin, Mikhail and Niyogi, Partha},
+  journal={Neural Computation},
+  volume={15},
+  number={6},
+  pages={1373--1396},
+  year={2003},
+  publisher={MIT Press},
+  doi={10.1162/089976603321780317}
+}
+
+@article{vandermaaten2008tsne,
+  title={Visualizing Data using t-{SNE}},
+  author={van der Maaten, Laurens and Hinton, Geoffrey},
+  journal={Journal of Machine Learning Research},
+  volume={9},
+  number={86},
+  pages={2579--2605},
+  year={2008},
+  url={https://jmlr.org/papers/v9/vandermaaten08a.html}
+}
+
+@inproceedings{tang2016largevis,
+  title={Visualizing Large-scale and High-dimensional Data},
+  author={Tang, Jian and Liu, Jingzhou and Zhang, Ming and Mei, Qiaozhu},
+  booktitle={Proceedings of the 25th International Conference on World Wide Web (WWW '16)},
+  pages={287--297},
+  year={2016},
+  doi={10.1145/2872427.2883041}
+}
+
+@misc{spivak2009metric,
+  title={Metric realization of fuzzy simplicial sets},
+  author={Spivak, David I.},
+  year={2009},
+  note={Self-published notes},
+  url={https://dspivak.net/metric_realization090922.pdf}
+}
+
+% Listed as reference 1 in repos/glasbey/README.rst.
+@article{glasbey2007colour,
+  title={Colour displays for categorical images},
+  author={Glasbey, Chris and van der Heijden, Gerie and Toh, Vivian F. K. and Gray, Alison},
+  journal={Color Research \& Application},
+  volume={32},
+  number={4},
+  pages={304--309},
+  year={2007},
+  publisher={Wiley},
+  doi={10.1002/col.20327}
+}
+
+% Repos without a paper are cited as software: see repos/citations.bib.

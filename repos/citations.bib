@@ -1,0 +1,283 @@
+% What to cite when you use the code in repos/, one section per repo.
+%
+% Paper entries are copied unchanged from docs/papers/citations.bib
+% (itself copied from each upstream README where the README asks for a
+% citation), so keys match what people copied from upstream. If you
+% change one here, change it there too. Repos without a paper get a
+% "software" entry; add the version you used (version = {...}) and that
+% release's year. "software" is a biblatex entry type; classic BibTeX styles
+% warn and treat it as "misc".
+%
+% Which entries each repo asks for is in repos/README.md. Checked on
+% 2026-10-25 against the submodule commits recorded in this repo.
+
+
+% ===================================================================
+% umap (umap-learn)
+% ===================================================================
+
+% Asked for in repos/umap/README.rst, "Citation": the JOSS paper whenever
+% you use the software, the arXiv paper for the algorithm. SMG2020 if you use
+% Parametric UMAP, NBC2020 if you use densMAP, Healy2024 if the Nature
+% Primer helped you.
+
+@article{mcinnes2018umap-software,
+  title={UMAP: Uniform Manifold Approximation and Projection},
+  author={McInnes, Leland and Healy, John and Saul, Nathaniel and Grossberger, Lukas},
+  journal={The Journal of Open Source Software},
+  volume={3},
+  number={29},
+  pages={861},
+  year={2018}
+}
+
+
+@article{2018arXivUMAP,
+     author = {{McInnes}, L. and {Healy}, J. and {Melville}, J.},
+     title = "{UMAP: Uniform Manifold Approximation
+     and Projection for Dimension Reduction}",
+     journal = {ArXiv e-prints},
+     archivePrefix = "arXiv",
+     eprint = {1802.03426},
+     primaryClass = "stat.ML",
+     keywords = {Statistics - Machine Learning,
+                 Computer Science - Computational Geometry,
+                 Computer Science - Learning},
+     year = 2018,
+     month = feb,
+}
+
+
+@article {SMG2020,
+    author = {Sainburg, Tim and McInnes, Leland and Gentner, Timothy Q.},
+    title = {Parametric UMAP: learning embeddings with deep neural networks for representation and semi-supervised learning},
+    journal = {ArXiv e-prints},
+    archivePrefix = "arXiv",
+    eprint = {2009.12981},
+    primaryClass = "stat.ML",
+    keywords = {Statistics - Machine Learning,
+                Computer Science - Computational Geometry,
+                Computer Science - Learning},
+    year = 2020,
+    }
+
+
+@article {NBC2020,
+    author = {Narayan, Ashwin and Berger, Bonnie and Cho, Hyunghoon},
+    title = {Assessing Single-Cell Transcriptomic Variability through Density-Preserving Data Visualization},
+    journal = {Nature Biotechnology},
+    year = {2021},
+    doi = {10.1038/s41587-020-00801-7},
+    publisher = {Springer Nature},
+    URL = {https://doi.org/10.1038/s41587-020-00801-7},
+    eprint = {https://www.biorxiv.org/content/early/2020/05/14/2020.05.12.077776.full.pdf},
+}
+
+
+@article{Healy2024,
+  author={Healy, John
+  and McInnes, Leland},
+  title={Uniform manifold approximation and projection},
+  journal={Nature Reviews Methods Primers},
+  year={2024},
+  month={Nov},
+  day={21},
+  volume={4},
+  number={1},
+  pages={82},
+  issn={2662-8449},
+  doi={10.1038/s43586-024-00363-x},
+  url={https://doi.org/10.1038/s43586-024-00363-x}
+}
+
+
+% ===================================================================
+% hdbscan
+% ===================================================================
+
+% Asked for in repos/hdbscan/README.rst, "Citing": the JOSS paper for the
+% software, the ICDMW paper for the accelerated algorithm, FLASC if you use
+% branch detection.
+
+@article{mcinnes2017hdbscan,
+  title={hdbscan: Hierarchical density based clustering},
+  author={McInnes, Leland and Healy, John and Astels, Steve},
+  journal={The Journal of Open Source Software},
+  volume={2},
+  number={11},
+  pages={205},
+  year={2017}
+}
+
+
+@inproceedings{mcinnes2017accelerated,
+  title={Accelerated Hierarchical Density Based Clustering},
+  author={McInnes, Leland and Healy, John},
+  booktitle={Data Mining Workshops (ICDMW), 2017 IEEE International Conference on},
+  pages={33--42},
+  year={2017},
+  organization={IEEE}
+}
+
+
+@article{bot2025flasc,
+    title   = {{FLASC: a flare-sensitive clustering algorithm}},
+    author  = {Bot, Dani{\"{e}}l M. and Peeters, Jannes and Liesenborgs, Jori and Aerts, Jan},
+    year    = {2025},
+    month   = {apr},
+    journal = {PeerJ Comput. Sci.},
+    volume  = {11},
+    pages   = {e2792},
+    issn    = {2376-5992},
+    doi     = {10.7717/peerj-cs.2792},
+    url     = {https://peerj.com/articles/cs-2792},
+}
+
+
+% ===================================================================
+% fast_hdbscan
+% ===================================================================
+
+% repos/fast_hdbscan/README.rst, "References", names the papers it adapts:
+% mcinnes2017accelerated and bot2025flasc (above), bot2025plscan (below) and
+% this one. Cite them along with the repo.
+
+@inproceedings{campello2013density,
+  title={Density-Based Clustering Based on Hierarchical Density Estimates},
+  author={Campello, Ricardo J. G. B. and Moulavi, Davoud and Sander, J{\"o}rg},
+  booktitle={Advances in Knowledge Discovery and Data Mining (PAKDD 2013)},
+  series={Lecture Notes in Computer Science},
+  volume={7819},
+  pages={160--172},
+  year={2013},
+  publisher={Springer},
+  doi={10.1007/978-3-642-37456-2_14}
+}
+
+
+% ===================================================================
+% fast_plscan and EVoC
+% ===================================================================
+
+% Asked for in repos/fast_plscan/README.md, "Citing". repos/evoc/README.rst,
+% "References", says EVoC's own algorithm is unpublished and asks for this
+% paper instead. Also the paper for fast_hdbscan's PLSCAN mode.
+
+@misc{bot2025plscan,
+  title         = {Persistent Multiscale Density-based Clustering},
+  author        = {Dani{\"{e}}l Bot and Leland McInnes and Jan Aerts},
+  year          = {2025},
+  eprint        = {2512.16558},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2512.16558}
+}
+
+
+% ===================================================================
+% glasbey
+% ===================================================================
+
+% repos/glasbey/README.rst, "References", item 1.
+
+@article{glasbey2007colour,
+  title={Colour displays for categorical images},
+  author={Glasbey, Chris and van der Heijden, Gerie and Toh, Vivian F. K. and Gray, Alison},
+  journal={Color Research \& Application},
+  volume={32},
+  number={4},
+  pages={304--309},
+  year={2007},
+  publisher={Wiley},
+  doi={10.1002/col.20327}
+}
+
+
+% ===================================================================
+% pynndescent
+% ===================================================================
+
+% The NN-descent algorithm that pynndescent implements.
+
+@inproceedings{dong2011nndescent,
+  title={Efficient k-nearest neighbor graph construction for generic similarity measures},
+  author={Dong, Wei and Charikar, Moses and Li, Kai},
+  booktitle={Proceedings of the 20th International Conference on World Wide Web (WWW '11)},
+  pages={577--586},
+  year={2011},
+  publisher={ACM},
+  doi={10.1145/1963405.1963487}
+}
+
+
+% ===================================================================
+% Repos without a paper (cite the repo)
+% ===================================================================
+% None of these repos asks for a particular citation. Authors are from
+% each package's pyproject.toml or setup.py.
+
+@software{datamapplot,
+  author = {McInnes, Leland},
+  title = {{DataMapPlot}: presentation and publication ready plots of data maps},
+  publisher = {GitHub},
+  url = {https://github.com/TutteInstitute/datamapplot}
+}
+
+@software{toponymy,
+  author = {Healy, John and McInnes, Leland},
+  title = {{Toponymy}: using large language models to name topics},
+  publisher = {GitHub},
+  url = {https://github.com/TutteInstitute/toponymy}
+}
+
+@software{evoc,
+  author = {McInnes, Leland},
+  title = {{EVōC}: Embedding Vector Oriented Clustering},
+  publisher = {GitHub},
+  url = {https://github.com/TutteInstitute/evoc}
+}
+
+@software{fast_hdbscan,
+  author = {McInnes, Leland},
+  title = {fast\_hdbscan: a fast multicore version of {HDBSCAN} and {PLSCAN} clustering},
+  publisher = {GitHub},
+  url = {https://github.com/TutteInstitute/fast_hdbscan}
+}
+
+@software{pynndescent,
+  author = {McInnes, Leland},
+  title = {{PyNNDescent}: Nearest Neighbor Descent},
+  publisher = {GitHub},
+  url = {https://github.com/lmcinnes/pynndescent}
+}
+
+@software{glasbey,
+  author = {McInnes, Leland},
+  title = {glasbey: algorithmically generate categorical color palettes},
+  publisher = {GitHub},
+  url = {https://github.com/lmcinnes/glasbey}
+}
+
+@software{vectorizers,
+  author = {Healy, John and McInnes, Leland and Weir, Colin},
+  title = {Vectorizers},
+  publisher = {GitHub},
+  url = {https://github.com/TutteInstitute/vectorizers}
+}
+
+% Entry as given in repos/datamapplot/paper.bib.
+@misc{thisnotthat,
+  author = {Hamelin, Benoit and Healy, John and McInnes, Leland},
+  title = {ThisNotThat: Interactive data maps},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  url = {https://github.com/TutteInstitute/thisnotthat}
+}
+
+@software{temporal_mapper,
+  author = {Ruscitti, Kaleb D.},
+  title = {temporal-mapper: density-based Mapper for temporal topic modelling},
+  publisher = {GitHub},
+  url = {https://github.com/TutteInstitute/temporal-mapper}
+}

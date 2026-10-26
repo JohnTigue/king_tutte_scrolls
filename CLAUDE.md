@@ -27,7 +27,7 @@ https://connoiter.com/blog/
 - `docs/talks/` — curated datamapping tech talks.
   - TODO: A very early work in progress
 - `docs/papers/` — annotated bibliography of datamapping papers
-  (`index.md`). The repo is used commercially: local PDFs in `pdfs/` only
+  (`index.md`) with BibTeX for each in `citations.bib`. The repo is used commercially: local PDFs in `pdfs/` only
   for CC BY/CC0 papers. Never copy in anything NC, ND, arXiv-default or
   publisher-copyright; link it with a short description instead.
 - `tools/` — curation tools packaged as Agent Skills (symlinked into
@@ -36,7 +36,10 @@ https://connoiter.com/blog/
 - `library/` — notes on specific techniques and papers.
 - `images/` — assets used by the README.
 - `repos/` — upstream git submodules, kept as reference code for how the
-  tools are meant to be used. Don't edit these; they track upstream.
+  tools are meant to be used. Don't edit the submodules; they track upstream.
+  `repos/README.md` (ours) indexes them with each one's license, what it
+  asks you to cite, and the licenses of what it installs; `repos/citations.bib`
+  has the BibTeX for using the code.
   - Pipeline stages: `vectorizers` (embed), `umap` + `pynndescent` (reduce),
     `hdbscan` / `fast_hdbscan` / `fast_plscan` / `evoc` (cluster), `toponymy` (name
     clusters), `datamapplot` + `glasbey` (render, colour palettes).
@@ -58,6 +61,33 @@ https://connoiter.com/blog/
 - Only curate material that is permissively licensed, and credit/cite upstream sources.
 - There's no integrated pipeline yet, so don't describe one as runnable unless
   the code for it is actually in the repo.
+
+## Citations and licenses
+
+The upstream researchers are credited through citations, so citing them
+is a requirement, not a courtesy. Showing that a pipeline is
+permissively licensed is part of the same job.
+
+- When you build a datamap, or write code or docs that use these code
+  bases (including in another repo that uses Seshette), ship a credits
+  file with it, as described in `repos/README.md` under "Credits as a
+  build artifact": each package that ran with its version and license,
+  the generated license list for the environment, the models used, and
+  references. Cite what each code base asks for (`repos/README.md`,
+  "What to cite") using `repos/citations.bib`. In a README, notebook or
+  datamap page, add a short "References" or "Built with" section too.
+- Not everything is permissive: `datamapplot` requires `pylabeladjust`
+  (GPL-3.0). Say so whenever you describe a pipeline as permissively
+  licensed, and don't call a build permissive without checking its
+  resolved environment.
+- Seshette's `SKILL.md` must carry these instructions, because agents
+  in other repos read the skill, not this file.
+- When a submodule moves to a new commit, re-check its license and
+  citation request and update `repos/README.md` and `repos/citations.bib`.
+- Every paper added to `docs/papers/index.md` gets a `**Cite:**` line
+  and a BibTeX entry in `citations.bib`. Use the citation the upstream
+  repo asks for, copied unchanged, when there is one. Otherwise build it
+  from the DOI's Crossref record or the arXiv API, and never from memory.
 
 ## Agent skills
 

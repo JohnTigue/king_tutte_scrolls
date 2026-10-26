@@ -332,10 +332,37 @@ PRs welcome! We use [the GitHub Flow](https://docs.github.com/en/get-started/usi
 
 Finally, the academic types such as the researchers at the Tutte
 Institute live and die by citations, so giving thanks via a citation
-is the best bang for buck way of contributing. See specific repos for 
-how to cite. For example:
-- [UMAP citing](https://github.com/lmcinnes/umap?tab=readme-ov-file#citation)
-- [HDBSCAN citing](https://github.com/scikit-learn-contrib/hdbscan?tab=readme-ov-file#citing)
+is the best bang for buck way of contributing. See [Citing](#citing).
+
+
+## Citing
+
+**If you use a King Tutte pipeline, cite the software and papers it
+is built on.** The Tutte Institute and its collaborators gave this
+software away under permissive licenses. Citations are how they are
+credited for it.
+
+[docs/papers/index.md, "How to cite"](docs/papers/index.md#how-to-cite)
+says which papers to cite for each tool, following each upstream
+repo's own request. [docs/papers/citations.bib](docs/papers/citations.bib)
+has the BibTeX. For a typical text datamap that means:
+
+- UMAP: McInnes, Healy, Saul & Großberger, JOSS 2018 (the software),
+  and McInnes, Healy & Melville, arXiv:1802.03426 (the algorithm).
+- HDBSCAN: McInnes, Healy & Astels, JOSS 2017. Or, if you clustered
+  with EVōC, PLSCAN: Bot, McInnes & Aerts, arXiv:2512.16558.
+- Toponymy and DataMapPlot: their GitHub repos (no papers yet).
+
+The code bases themselves are indexed in [repos/README.md](repos/README.md):
+each one's license, what it asks you to cite, and the licenses of what
+it installs, with BibTeX in [repos/citations.bib](repos/citations.bib).
+All thirteen are permissively licensed (BSD, MIT). One required
+dependency is not: DataMapPlot needs `pylabeladjust`, which is GPL-3.0.
+
+That applies to a datamap published as a web page or notebook too.
+Give it a short "Built with" or "References" section, and a credits
+file listing what ran and under which license. Agents building
+datamaps with this repo's skill are instructed to add both.
 
 
 
