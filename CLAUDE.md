@@ -7,9 +7,13 @@ collections of embedding vectors into interactive datamaps.
 
 The goal is Seshette, a generic `/datamap` Agent Skill: point it at a
 collection of documents (or embeddings) and it runs a King Tutte pipeline
-locally to produce an interactive datamap. Source-specific mappers live in
-their own repos and use Seshette as a component; keep source-specific
-material out of this repo.
+locally to produce an interactive datamap. Alongside it, the Scrolls carry a
+few cookbook examples: source-specific sub-skills for widely used sources,
+such as `/datamap-okf` (OKF bundles) and `/datamap-chroma` (Chroma vector
+databases), that are useful in their own right and also show how to write
+one (`.scratch/datamap-examples/`). Mappers for niche formats don't belong
+here; their authors study the Scrolls, use them like an SDK, and build their
+own in their own repos with Seshette as a component.
 
 ## References
 

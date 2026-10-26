@@ -16,8 +16,9 @@ or one agent, to the next.
 
 The Scrolls curate the right tools and know-how, but nothing yet turns them
 into "datamap my data" for an agent or a person. Separately, source-specific
-mappers built in other repos need a dependable component to build on instead of
-re-implementing the pipeline.
+mappers, whether cookbook examples in this repo or mappers built in other repos,
+need a dependable component to build on instead of re-implementing the
+pipeline.
 
 ## Solution
 
@@ -94,7 +95,7 @@ generated committed alongside it.
 **Skill shape**
 - Seshette is an Agent Skill named `datamap` (giving the `/datamap` trigger) in this repo. "Seshette" is its project name and appears in the skill's description.
 - Version 1 contains instructions only, with no shipped Python. The agent reads the curated upstream example code in the repo, then writes and runs the pipeline code itself. Code moves into Python as the approach stabilizes.
-- Seshette is generic: it has no knowledge of any source format. Source-specific mappers live in their own repos and call Seshette.
+- Seshette is generic: it has no knowledge of any source format. Source-specific mappers call Seshette. A few cookbook examples for widely used sources (`/datamap-okf`, `/datamap-chroma`; `.scratch/datamap-examples/`) live in this repo as sub-skills of `/datamap`. Mappers for niche formats live in their own repos.
 - The skill consists of a top-level instruction file plus one instruction file per scribe. A caller may start at any scribe; each scribe checks that its input tables exist and conform to the schema before running.
 - When a person points `/datamap` at a folder, the top-level skill writes the `documents` table before any scribe runs: one file is one document, its `id` comes from its path within the folder, its `title` comes from a heading or the filename when one is obvious, and its `url` may be a `file://` link to the file. A source-specific caller skips this step and writes `documents` itself. Reading files is not a pipeline stage, so it is not a scribe.
 - Folder ingest cleans its input before writing `documents`, because very short documents form junk clusters and exact duplicates form tight, artificial ones:
@@ -183,7 +184,7 @@ generated committed alongside it.
 
 ## Out of Scope
 
-- Source-specific mappers, including any mapper for a particular knowledge-bundle format. They live in their own repos and call Seshette.
+- Source-specific mappers. The cookbook examples are specified separately in `.scratch/datamap-examples/`; mappers for niche formats live in their own repos and call Seshette.
 - The separate Seshette web-service repo; this spec is unrelated to it.
 - Shipping Python implementations of the scribes. Version 1 is instructions plus generated example code only.
 - Packaging Seshette as a Claude Code plugin, or any formal distribution.

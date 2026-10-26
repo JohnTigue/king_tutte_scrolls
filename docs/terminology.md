@@ -31,9 +31,18 @@ format. _Avoid:_ "Seshat", "Sachet".
 ## Caller
 
 Whoever invokes Seshette: a person typing `/datamap`, or a source-specific
-skill in another repo that prepares the input and uses Seshette as a
-component. The caller supplies each point's `id`, `text` and, optionally,
-`title` and `url`.
+skill that prepares the input and uses Seshette as a component. That skill
+is either a cookbook example in this repo or one someone built in their own
+repo. The caller supplies each point's `id`, `text` and, optionally, `title`
+and `url`.
+
+## Cookbook example
+
+A source-specific sub-skill of `/datamap` that lives in the Scrolls, for a
+widely used source such as OKF bundles (`/datamap-okf`) or Chroma vector
+databases (`/datamap-chroma`). Each one is useful on its own and is written
+to be studied, so that someone with a niche format can build their own
+caller from it. _Avoid:_ "plugin", "adapter".
 
 ## Scribe
 
